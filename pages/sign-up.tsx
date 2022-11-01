@@ -2,7 +2,6 @@ import { DevTool } from '@hookform/devtools';
 import { useMutation } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import classNames from 'classnames';
-import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -171,14 +170,6 @@ const Step1 = ({ setFormData, step1Form }: Step1Props) => {
                 if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                   return 'Invalid email address';
                 }
-                try {
-                  await checkEmail(value);
-                  return undefined;
-                } catch (error: any) {
-                  return error?.response?.status === 400
-                    ? 'This email is already registered'
-                    : 'Validation failed';
-                }
               },
             })}
           />
@@ -316,6 +307,7 @@ const Step2 = ({ setFormData, step1Form }: Step2Props) => {
       return;
     }
     toast.success('Registered successfully');
+    router.push(ROUTES.SIGN_IN);
   };
 
   return (
