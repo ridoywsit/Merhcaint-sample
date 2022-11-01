@@ -88,7 +88,6 @@ const TopNavBar = ({ title }: { title: string }) => {
                   <div className="px-5 pt-4 flex items-center justify-between text-cyan-500 font-semibold">
                     <h1 className=" text-slate-800 font-bold">Notification</h1>
                     <Button
-                      onClick={() => queryClient.invalidateQueries()}
                       size="lg"
                       type="button"
                       variant="clear"
@@ -98,7 +97,7 @@ const TopNavBar = ({ title }: { title: string }) => {
                     </Button>
                   </div>
 
-                  <Link href={ROUTES.APP.NOTIFICATION} passHref>
+                  <Link href="#" passHref>
                     <MenuLink className="block w-full text-center border-t border-slate-300 p-4 mt-6 text-cyan-600 font-semibold hover:cursor-pointer">
                       <span>See All Notifications</span>
                     </MenuLink>
@@ -117,16 +116,6 @@ const TopNavBar = ({ title }: { title: string }) => {
                   </div>
                 </MenuButton>
                 <MenuList className="relative py-3 bg-white rounded-lg  min-w-[184px] drop-shadow-btn-menu border z-30">
-                  <Link href={ROUTES.APP.PROFILE.HOME} passHref>
-                    <MenuLink className="block w-full px-4 py-2 text-body-regular text-merchaint-text-black-800 hover:cursor-pointer">
-                      <span>Profile</span>
-                    </MenuLink>
-                  </Link>
-                  <Link href={ROUTES.APP.SETTINGS.HOME} passHref>
-                    <MenuLink className="block w-full px-4 py-2 text-body-regular text-merchaint-text-black-800 hover:cursor-pointer">
-                      <span>Settings</span>
-                    </MenuLink>
-                  </Link>
                   <MenuItem
                     className="px-4 py-2 text-body-regular text-merchaint-text-black-800 hover:cursor-pointer"
                     onSelect={handleLogOut}
