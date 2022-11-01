@@ -8,7 +8,7 @@ Then use
 ```bash
 pnpm i
 ```
-After that use
+After that to run the project use
 ```bash
 pnpm run dev
 ```
