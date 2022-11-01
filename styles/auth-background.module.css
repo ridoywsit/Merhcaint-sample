@@ -1,0 +1,13 @@
+.wrapper {
+  background-image: url('/svg/vector-7.svg'), url('/svg/vector-6.svg');
+  background-repeat: no-repeat no-repeat;
+  background-position: top left, bottom right;
+}
+
+.image__wrapper {
+  display: grid;
+  grid-template-areas: 'stack';
+}
+.image__wrapper > * {
+  grid-area: stack;
+}

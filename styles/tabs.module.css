@@ -1,0 +1,10 @@
+.tabs__trigger {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.tabs__trigger[data-state='active'] {
+  --tw-text-opacity: 1;
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--merchaint-teal-100), var(--tw-bg-opacity));
+  color: rgba(var(--merchaint-teal-700), var(--tw-text-opacity));
+}
